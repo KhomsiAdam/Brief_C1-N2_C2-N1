@@ -1,0 +1,91 @@
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.gallery-image {
+    flex: 30%;
+    padding: 0px 40px 40px 0px;
+}
+
+.gallery-text {
+    flex: 70%;
+}
+
+.gallery-text h3 {
+    padding: 30px 0px 0px 0px;
+    text-align: left;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.gallery-text h4 {
+    text-align: left;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.gallery-text p {
+    padding: 10px 0px 0px 0px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.more-details {
+    justify-content: center;
+    display: flex;
+    padding-top: 90px;
+    padding-bottom: 0px;
+}
+
+.more-details a {
+    width: 200px;
+    font-size: 17px;
+    padding: 20px 0px;
+    background-color: #81256c;
+    color: #fff;
+    display: inline-block;
+    line-height: 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.more-details a:hover {
+    background-color:  #000;
+}
+
+
+/** Some adjustments to when screen size width goes below 1200px**/
+@media screen and (max-width: 1200px) {
+    .more-details {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+/** Some adjustments to when screen size width goes below 1000px for mobile **/
+@media screen and (max-width: 1000px) {
+    .gallery-container {
+        flex-direction: column;
+    }
+    .gallery-text h3 {
+        text-align: center;
+    }
+    .gallery-text h4 {
+        text-align: center;
+    }
+    .gallery-text p {
+        text-align: center;
+        padding: 10px 0px 0px 0px;
+    }
+    .gallery-image {
+        padding: 0px 0px 0px 0px;
+        width: 75%;
+        height: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .more-details {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+}
