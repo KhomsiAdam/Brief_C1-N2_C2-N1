@@ -1,49 +1,44 @@
-/** Container of Book Image & Title/Description **/
-.gallery-container {
+/** Container of Event Image & Informations **/
+.events-container {
     display: flex;
     flex-direction: row;
     position: relative;
-    padding: 0px 0px 40px 0px;
+    padding: 0px 0px 60px 0px;
 }
 
-/** Book Image Cover **/
-.gallery-image {
-    flex: 30%;
-    margin: 0px 40px 0px 0px;
-    transition: .2s;
-    transition-duration: 400ms;
-    overflow: hidden;
+
+/** Event Image **/
+.events-image {
+    flex: 40%;
+    margin: 40px 40px 0px 0px;
 }
 
-/** Image Zoom Hover animation **/
-.gallery-image:hover img {
-    transform: scale(1.1);
+.events-image p {
+    padding: 20px 0px 0px 0px;
+    text-align: center;
+    font-size: 16px;
 }
 
-.gallery-image img {
-    transition-duration: 400ms;
+/** Event Title & Informations **/
+.events-text {
+    flex: 60%;
 }
 
-/** Book Title & Description **/
-
-.gallery-text {
-    flex: 70%;
-}
-
-.gallery-text h3 {
+.events-text h3 {
     padding: 30px 0px 0px 0px;
     text-align: left;
     font-size: 32px;
-    font-weight: bold;
+    
 }
 
-.gallery-text h4 {
+.events-text h4 {
     text-align: left;
     font-size: 20px;
     font-style: italic;
+    color: #81256c;
 }
 
-.gallery-text p {
+.events-text p {
     padding: 10px 0px 0px 0px;
     text-align: left;
     font-size: 16px;
@@ -52,9 +47,10 @@
 /** More Details Button **/
 
 .more-details {
-    display: flex;
     justify-content: center;
-    padding: 0px 0px 40px 0px;
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 60px;
     margin: 0 auto;
     position: absolute;
     bottom: 0;
@@ -77,51 +73,45 @@
     background-color:  #000;
 }
 
+/** Events Line Separator **/
+hr.solid {
+    border-top: 2px solid #81256c;
+  }
 
 /** Some adjustments to when screen size width goes below 1200px**/
 @media screen and (max-width: 1200px) {
     .more-details {
-        padding: 10px 0px 40px 200px;
-        margin: 0;
-        display: flex;
-        margin: 0 auto;
-        position: absolute;
-        bottom: 0;
-        right: 0;
+        padding-top: 10px;
+        padding-bottom: 30px;
     }
-    .gallery-text h3 {
-        padding: 0px 0px 0px 0px;
-    }
-    .gallery-image {
+    .events-image {
         flex: 40%;
+        padding-top: 60px;
     }
 }
 /** Some adjustments to when screen size width goes below 1000px for mobile **/
 @media screen and (max-width: 1000px) {
-    .gallery-container {
+    .events-container {
         flex-direction: column;
-        padding: 0px 0px 0px 0px;
-    }
-    .gallery-text h3 {
-        text-align: center;
         padding: 30px 0px 0px 0px;
     }
-    .gallery-text h4 {
+    .events-text h3 {
         text-align: center;
     }
-    .gallery-text p {
+    .events-text h4 {
+        text-align: center;
+    }
+    .events-text p {
         text-align: center;
         padding: 10px 0px 0px 0px;
     }
-    .gallery-image {
+    .events-image {
         padding: 0px 0px 0px 0px;
-        width: 75%;
-        height: 75%;
         margin-left: auto;
         margin-right: auto;
     }
     .more-details {
-        padding: 30px 0px 60px 0px;
+        padding: 30px 0px 30px 0px;
         position: static;
     }
 }
